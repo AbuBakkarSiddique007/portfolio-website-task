@@ -49,8 +49,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative flex w-full justify-center py-16 lg:py-24">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[32px] px-6 lg:px-0">
+    <section id="contact" className="relative flex w-full justify-center pb-12 pt-16 lg:pb-16 lg:pt-24">
+      <div className="pointer-events-none absolute -right-28 -bottom-36 h-[850px] w-[800px] rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.16)_0%,rgba(14,50,90,0.1)_45%,transparent_75%)] blur-[120px]"></div>
+
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[32px] px-6 lg:px-0">
 
         <p className="font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
           CONTACT

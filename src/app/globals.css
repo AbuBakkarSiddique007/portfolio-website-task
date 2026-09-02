@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #080c14;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -12,22 +12,23 @@
   --font-manrope: var(--font-manrope), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  background-color: #080c14;
 }
 
 body {
-  background: var(--background);
+  background-color: #080c14;
+  background-image:
+    radial-gradient(ellipse 80% 600px at 50% -100px, rgba(14, 60, 100, 0.22), transparent 70%),
+    radial-gradient(circle 500px at 85% 1100px, rgba(14, 50, 90, 0.18), transparent 70%),
+    radial-gradient(circle 600px at 15% 2200px, rgba(14, 40, 80, 0.15), transparent 70%),
+    radial-gradient(circle 600px at 85% 98%, rgba(37, 99, 235, 0.16), transparent 70%),
+    linear-gradient(180deg, #090e18 0%, #080c14 15%, #070b13 45%, #080c15 75%, #06090f 100%);
   color: var(--foreground);
   font-family: var(--font-sans);
+  min-height: 100%;
 }
 
 @keyframes marquee {

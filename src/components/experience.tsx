@@ -102,7 +102,10 @@ export default function Experience() {
 
   return (
     <section id="experience" className="relative flex w-full justify-center py-16">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[40px] px-6 lg:px-0">
+      <div className="pointer-events-none absolute -right-24 top-1/3 h-[750px] w-[650px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(20,184,166,0.18)_0%,rgba(14,50,90,0.12)_45%,transparent_75%)] blur-[100px]"></div>
+      <div className="pointer-events-none absolute -left-20 bottom-10 h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(30,58,138,0.14)_0%,transparent_70%)] blur-[90px]"></div>
+
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[40px] px-6 lg:px-0">
 
         <div className="flex flex-col gap-[4px]">
           <p className="font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] text-[rgba(145,145,145,1)]">
