@@ -1,16 +1,20 @@
 "use client";
 
+import ScrollReveal from "@/components/scroll-reveal";
+
 export default function About() {
   return (
     <section id="about" className="relative flex w-full justify-center py-16 lg:py-24">
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[16px] px-6 xl:px-0">
-        <p className="w-full max-w-[1280px] font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
-          ABOUT
-        </p>
+        <ScrollReveal>
+          <p className="w-full max-w-[1280px] font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
+            ABOUT
+          </p>
+        </ScrollReveal>
 
         <div className="flex w-full flex-col justify-between gap-[32px] lg:flex-row lg:items-end">
-
-          <div className="flex w-full flex-col justify-between gap-6 lg:w-[529px]">
+          <ScrollReveal delay={100} className="w-full lg:w-[529px]">
+            <div className="flex w-full flex-col justify-between gap-6">
             <h2 className="flex items-center text-4xl font-bold tracking-normal text-[#f1f1f1] font-[family-name:var(--font-manrope)] sm:text-5xl lg:text-[72px] lg:leading-[100%]">
               Mazidul Hakim
             </h2>
@@ -37,9 +41,10 @@ export default function About() {
                 </span>
               </p>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
 
-          <div className="relative flex w-full items-center justify-center lg:h-[468px] lg:w-[658px]">
+          <ScrollReveal delay={200} className="relative flex w-full items-center justify-center lg:h-[468px] lg:w-[658px]">
             <div className="pointer-events-none absolute top-1/2 left-1/2 h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.28)_0%,rgba(14,50,90,0.18)_45%,transparent_70%)] blur-2xl"></div>
 
             <div className="relative grid h-full w-full grid-cols-1 gap-[24px] sm:grid-cols-2">
@@ -83,16 +88,17 @@ export default function About() {
                 </span>
               </div>
             </div>
+          </ScrollReveal>
+        </div>
+
+        <ScrollReveal delay={300} className="w-full max-w-[1280px]">
+          <div className="flex w-full items-center rounded-[4px] border-l border-l-[#38bdf8] bg-[#0e131b]/70 px-[24px] py-[14px] backdrop-blur-md lg:h-[86px]">
+            <p className="w-full max-w-[1232px] font-mono text-xs leading-relaxed text-zinc-300 sm:text-[13px]">
+              I judge every technology decision by the business outcome it drives &mdash;{" "}
+              <span className="text-[#38bdf8]">not the shine of the tool</span>. Uptime and security are the baseline; the job is turning IT into something the business can actually grow on.
+            </p>
           </div>
-
-        </div>
-
-        <div className="flex w-full max-w-[1280px] items-center rounded-[4px] border-l border-l-[#38bdf8] bg-[#0e131b]/70 px-[24px] py-[14px] backdrop-blur-md lg:h-[86px]">
-          <p className="w-full max-w-[1232px] font-mono text-xs leading-relaxed text-zinc-300 sm:text-[13px]">
-            I judge every technology decision by the business outcome it drives &mdash;{" "}
-            <span className="text-[#38bdf8]">not the shine of the tool</span>. Uptime and security are the baseline; the job is turning IT into something the business can actually grow on.
-          </p>
-        </div>
+        </ScrollReveal>
 
       </div>
     </section>

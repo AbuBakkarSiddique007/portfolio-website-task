@@ -1,5 +1,7 @@
 "use client";
 
+import ScrollReveal from "@/components/scroll-reveal";
+
 const expertiseData = [
   {
     title: "Cloud & identity",
@@ -42,38 +44,39 @@ export default function Expertise() {
         </p>
 
         <div className="grid w-full grid-cols-1 gap-[16px] sm:grid-cols-2 lg:grid-cols-3">
-          {expertiseData.map((item) => (
-            <div
-              key={item.title}
-              className="group relative flex h-auto w-full flex-col gap-[16px] rounded-[12px] border border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,1)] px-[24px] py-[22px] transition-all duration-300 hover:border-[#38bdf8]/60 hover:shadow-[0_0_24px_rgba(56,189,248,0.08)]"
-            >
-              <div className="pointer-events-none absolute top-4 right-4 flex items-center justify-center opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 scale-75">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#38bdf8] opacity-75"></span>
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#38bdf8] shadow-[0_0_8px_#38bdf8]"></span>
-                </span>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <h3 className="font-[family-name:var(--font-manrope)] text-[20px] font-semibold leading-tight tracking-normal text-[rgba(241,241,241,1)]">
-                  {item.title}
-                </h3>
-                <p className="font-sans text-[14px] font-normal leading-[160%] tracking-normal text-[rgba(181,181,181,1)]">
-                  {item.description}
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-[8px]">
-                {item.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-[rgba(42,51,64,1)] bg-[rgba(26,32,42,1)] px-[10px] py-[4px] text-[11px] font-normal leading-[160%] text-zinc-300"
-                  >
-                    {tag}
+          {expertiseData.map((item, i) => (
+            <ScrollReveal key={item.title} delay={i * 80}>
+              <div
+                className="group relative flex h-full w-full flex-col gap-[16px] rounded-[12px] border border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,1)] px-[24px] py-[22px] transition-all duration-300 hover:border-[#38bdf8]/60 hover:shadow-[0_0_24px_rgba(56,189,248,0.08)]"
+              >
+                <div className="pointer-events-none absolute top-4 right-4 flex items-center justify-center opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 scale-75">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#38bdf8] opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-[#38bdf8] shadow-[0_0_8px_#38bdf8]"></span>
                   </span>
-                ))}
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <h3 className="font-[family-name:var(--font-manrope)] text-[20px] font-semibold leading-tight tracking-normal text-[rgba(241,241,241,1)]">
+                    {item.title}
+                  </h3>
+                  <p className="font-sans text-[14px] font-normal leading-[160%] tracking-normal text-[rgba(181,181,181,1)]">
+                    {item.description}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-[8px]">
+                  {item.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-[rgba(42,51,64,1)] bg-[rgba(26,32,42,1)] px-[10px] py-[4px] text-[11px] font-normal leading-[160%] text-zinc-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>

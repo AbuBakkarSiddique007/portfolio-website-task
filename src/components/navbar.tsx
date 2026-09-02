@@ -18,13 +18,20 @@ const allSections = [
 ];
 
 export default function Navbar() {
-  const [activeItem, setActiveItem] = useState("About");
+  const [activeItem, setActiveItem] = useState("");
   const [isContactActive, setIsContactActive] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const isClickingRef = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollHeight > 0) {
+        setScrollProgress((currentScroll / scrollHeight) * 100);
+      }
+
       if (isClickingRef.current) return;
 
       const isBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
@@ -54,9 +61,9 @@ export default function Navbar() {
       } else if (currentSection) {
         setIsContactActive(false);
         setActiveItem(currentSection);
-      } else if (window.scrollY < 200) {
+      } else if (window.scrollY < 50) {
         setIsContactActive(false);
-        setActiveItem("About");
+        setActiveItem("");
       }
     };
 
@@ -111,6 +118,10 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 flex h-[66px] w-full max-w-[1440px] items-center justify-center bg-[rgba(19,24,32,0.6)] backdrop-blur-[16px]">
+      <div
+        className="pointer-events-none absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-[#00b4d8] via-[#38bdf8] to-[#2db7ff] shadow-[0_0_8px_#38bdf8] transition-all duration-75"
+        style={{ width: `${scrollProgress}%` }}
+      />
       <div className="flex h-[34px] w-full max-w-[1280px] items-center justify-between px-4 sm:px-6 xl:px-0">
         <Link
           href="/"

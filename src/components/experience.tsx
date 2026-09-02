@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ScrollReveal from "@/components/scroll-reveal";
 
 const experiences = [
   {
@@ -120,7 +121,8 @@ export default function Experience() {
           <div className="absolute left-[90px] top-[0px] bottom-[29px] w-[2px] rounded-full bg-[rgba(42,51,64,1)] sm:left-[210px]"></div>
 
           {experiences.map((exp, i) => (
-            <div key={exp.title} className="flex items-start pb-[24px]">
+            <ScrollReveal key={exp.title} delay={i * 80}>
+            <div className="flex items-start pb-[24px]">
 
               <div className="flex w-[90px] shrink-0 flex-col items-end gap-[6px] pr-[10px] pt-[20px] sm:w-[210px] sm:gap-[8px] sm:pr-[16px]">
                 <span className="text-right font-[family-name:var(--font-manrope)] text-[13px] font-semibold text-[rgba(190,190,190,1)] sm:text-[15px]">
@@ -184,6 +186,7 @@ export default function Experience() {
               </div>
 
             </div>
+            </ScrollReveal>
           ))}
         </div>
 

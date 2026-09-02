@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Swal from "sweetalert2";
+import ScrollReveal from "@/components/scroll-reveal";
 
 export default function Contact() {
   const [email, setEmail] = useState("");
@@ -66,6 +67,7 @@ export default function Contact() {
 
         <div className="flex w-full flex-col justify-between gap-[48px] lg:flex-row lg:gap-[141px]">
 
+          <ScrollReveal delay={0}>
           <div className="flex w-full flex-col gap-[32px] lg:w-[631px]">
             <h2 className="font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-[48px] lg:leading-[1.15]">
               LET&apos;S SECURE WHAT<br />YOU BUILD
@@ -151,7 +153,9 @@ export default function Contact() {
               </div>
             </form>
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal delay={150}>
           <div className="flex flex-1 items-center justify-center lg:h-[562px]">
             <div className="flex w-full max-w-[383px] flex-col gap-[24px]">
               <span className="font-[family-name:var(--font-ibm-plex-mono)] text-[12px] font-bold tracking-wider text-[#ccff00]">
@@ -185,6 +189,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
+          </ScrollReveal>
 
         </div>
 
