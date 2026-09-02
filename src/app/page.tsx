@@ -2,6 +2,7 @@ import Hero from "@/components/hero";
 import Marquee from "@/components/marquee";
 import About from "@/components/about";
 import Expertise from "@/components/expertise";
+import CaseFiles from "@/components/casefiles";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Marquee />
       <About />
       <Expertise />
+      <CaseFiles />
     </main>
   );
 }
