@@ -3,6 +3,7 @@ import Marquee from "@/components/marquee";
 import About from "@/components/about";
 import Expertise from "@/components/expertise";
 import CaseFiles from "@/components/casefiles";
+import Experience from "@/components/experience";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <About />
       <Expertise />
       <CaseFiles />
+      <Experience />
     </main>
   );
 }
