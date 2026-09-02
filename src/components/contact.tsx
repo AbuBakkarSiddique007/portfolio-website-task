@@ -1,54 +1,49 @@
 "use client";
 
 import { useState } from "react";
-import Swal from "sweetalert2";
+import type { SweetAlertOptions } from "sweetalert2";
 import ScrollReveal from "@/components/scroll-reveal";
+
+const baseModalOptions = {
+  background: "#131820",
+  color: "#f1f1f1",
+  confirmButtonColor: "#38bdf8",
+  scrollbarPadding: false,
+  customClass: {
+    popup: "!w-[90vw] !max-w-[420px] !p-5 sm:!p-7 border border-[rgba(42,51,64,1)] !rounded-[20px] shadow-2xl !bg-[#131820]",
+    title: "!text-lg sm:!text-2xl font-[family-name:var(--font-manrope)] font-bold text-white !pt-2",
+    htmlContainer: "!text-xs sm:!text-sm text-zinc-400 font-sans !m-0 !mt-2",
+    confirmButton: "!w-full sm:!w-auto !rounded-[12px] font-bold !px-6 !py-2.5 !text-sm !mt-2",
+    icon: "!scale-75 sm:!scale-100 !my-1",
+    actions: "!w-full !m-0 !mt-3 flex justify-center",
+  },
+} satisfies SweetAlertOptions;
 
 export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const Swal = (await import("sweetalert2")).default;
 
     if (!email.trim() || !message.trim()) {
       Swal.fire({
+        ...baseModalOptions,
         icon: "warning",
         title: "Missing Information",
         text: "Please enter both your email and message before sending.",
-        background: "#131820",
-        color: "#f1f1f1",
-        confirmButtonColor: "#38bdf8",
-        scrollbarPadding: false,
-        customClass: {
-          popup: "!w-[90vw] !max-w-[420px] !p-5 sm:!p-7 border border-[rgba(42,51,64,1)] !rounded-[20px] shadow-2xl !bg-[#131820]",
-          title: "!text-lg sm:!text-2xl font-[family-name:var(--font-manrope)] font-bold text-white !pt-2",
-          htmlContainer: "!text-xs sm:!text-sm text-zinc-400 font-sans !m-0 !mt-2",
-          confirmButton: "!w-full sm:!w-auto !rounded-[12px] font-bold !px-6 !py-2.5 !text-sm !mt-2",
-          icon: "!scale-75 sm:!scale-100 !my-1",
-          actions: "!w-full !m-0 !mt-3 flex justify-center",
-        },
       });
       return;
     }
 
     Swal.fire({
+      ...baseModalOptions,
       icon: "success",
       title: "Message Sent!",
       text: "Thank you for reaching out. I will get back to you shortly.",
-      background: "#131820",
-      color: "#f1f1f1",
-      confirmButtonColor: "#38bdf8",
       iconColor: "#4ade80",
-      scrollbarPadding: false,
-      customClass: {
-        popup: "!w-[90vw] !max-w-[420px] !p-5 sm:!p-7 border border-[rgba(42,51,64,1)] !rounded-[20px] shadow-2xl !bg-[#131820]",
-        title: "!text-lg sm:!text-2xl font-[family-name:var(--font-manrope)] font-bold text-white !pt-2",
-        htmlContainer: "!text-xs sm:!text-sm text-zinc-400 font-sans !m-0 !mt-2",
-        confirmButton: "!w-full sm:!w-auto !rounded-[12px] font-bold !px-6 !py-2.5 !text-sm !mt-2",
-        icon: "!scale-75 sm:!scale-100 !my-1",
-        actions: "!w-full !m-0 !mt-3 flex justify-center",
-      },
     });
 
     setEmail("");

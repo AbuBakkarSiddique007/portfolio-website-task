@@ -1,13 +1,39 @@
+import dynamic from "next/dynamic";
 import Hero from "@/components/hero";
 import Marquee from "@/components/marquee";
 import About from "@/components/about";
 import Expertise from "@/components/expertise";
-import CaseFiles from "@/components/casefiles";
-import Experience from "@/components/experience";
-import Certificates from "@/components/certificates";
-import Qualifications from "@/components/qualifications";
-import Contact from "@/components/contact";
-import Footer from "@/components/footer";
+import LazySection from "@/components/lazy-section";
+
+const CaseFiles = dynamic(
+  () => import("@/components/casefiles"),
+  { loading: () => <section className="py-16" aria-hidden="true" /> }
+);
+
+const Experience = dynamic(
+  () => import("@/components/experience"),
+  { loading: () => <section className="py-16" aria-hidden="true" /> }
+);
+
+const Certificates = dynamic(
+  () => import("@/components/certificates"),
+  { loading: () => <section className="py-16" aria-hidden="true" /> }
+);
+
+const Qualifications = dynamic(
+  () => import("@/components/qualifications"),
+  { loading: () => <section className="py-16" aria-hidden="true" /> }
+);
+
+const Contact = dynamic(
+  () => import("@/components/contact"),
+  { loading: () => <section className="py-16" aria-hidden="true" /> }
+);
+
+const Footer = dynamic(
+  () => import("@/components/footer"),
+  { loading: () => null }
+);
 
 export default function Home() {
   return (
@@ -16,12 +42,18 @@ export default function Home() {
       <Marquee />
       <About />
       <Expertise />
-      <CaseFiles />
-      <Experience />
-      <Certificates />
-      <Qualifications />
-      <Contact />
-      <Footer />
+      <LazySection>
+        <CaseFiles />
+        <Experience />
+      </LazySection>
+      <LazySection>
+        <Certificates />
+        <Qualifications />
+      </LazySection>
+      <LazySection>
+        <Contact />
+        <Footer />
+      </LazySection>
     </main>
   );
 }

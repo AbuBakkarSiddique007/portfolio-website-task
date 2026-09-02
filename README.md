@@ -1,20 +1,21 @@
 # Mazidul Hakim — IT Leadership & Cybersecurity Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-portfolio--website--nu--one--49.vercel.app-38bdf8?style=flat&logo=vercel&logoColor=white)](https://portfolio-website-nu-one-49.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Netlify-38bdf8?style=flat&logo=netlify)](https://mazidul-hakim-portfolio.netlify.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=flat&logo=vercel)](https://portfolio-website-nu-one-49.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub_Repo-AbuBakkarSiddique007%2Fportfolio--website--task-181717?style=flat&logo=github&logoColor=white)](https://github.com/AbuBakkarSiddique007/portfolio-website-task)
 [![Next.js](https://img.shields.io/badge/Next.js-16.3-black?style=flat&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19.2-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Deployment](https://img.shields.io/badge/Deployed_on-Vercel-black?style=flat&logo=vercel)](https://portfolio-website-nu-one-49.vercel.app/)
 
 A modern, high-performance executive portfolio website built for **Mazidul Hakim** (Senior IT Leader &bull; Cloud &bull; Cybersecurity). Designed with a sleek dark aesthetic, subtle glow accents, interactive micro-animations, interactive alert feedback, and smooth navigation.
 
 ---
 
-## 🔗 Quick Links
+## 🔗 Live URLs
 
-- **🌐 Live Website**: [https://portfolio-website-nu-one-49.vercel.app/](https://portfolio-website-nu-one-49.vercel.app/)
+- **▮ Netlify**: [https://mazidul-hakim-portfolio.netlify.app/](https://mazidul-hakim-portfolio.netlify.app/)
+- **▲ Vercel**: [https://portfolio-website-nu-one-49.vercel.app/](https://portfolio-website-nu-one-49.vercel.app/)
 - **💻 GitHub Repository**: [https://github.com/AbuBakkarSiddique007/portfolio-website-task](https://github.com/AbuBakkarSiddique007/portfolio-website-task)
 
 ---
@@ -43,12 +44,12 @@ A modern, high-performance executive portfolio website built for **Mazidul Hakim
 | **Library** | [React 19](https://react.dev) |
 | **Language** | [TypeScript](https://www.typescriptlang.org) |
 | **Styling** | [Tailwind CSS v4](https://tailwindcss.com) + Custom CSS Variables |
-| **Animations** | [Motion](https://motion.dev) |
+| **Animations** | CSS animations + `IntersectionObserver` (scroll-reveal) |
 | **Notifications** | [SweetAlert2](https://sweetalert2.github.io/) |
 | **Icons** | [Lucide React](https://lucide.dev) |
 | **Typography** | `Inter`, `Manrope`, and `IBM Plex Mono` (via `next/font/google`) |
 | **Package Manager** | [pnpm](https://pnpm.io) |
-| **Deployment** | [Vercel](https://vercel.com) |
+| **Deployment** | [Vercel](https://vercel.com) &bull; [Netlify](https://netlify.com) |
 
 ---
 
@@ -72,9 +73,11 @@ portfolio-website-task/
 │       ├── expertise.tsx        # Core technical & leadership capabilities
 │       ├── footer.tsx           # Footer navigation & copyright
 │       ├── hero.tsx             # Hero section with interactive node map
+│       ├── lazy-section.tsx     # Lazy-loaded section wrapper for below-fold content
 │       ├── marquee.tsx          # Animated ticker
 │       ├── navbar.tsx           # Glassmorphic responsive navigation with scrollspy
 │       └── qualifications.tsx   # Academic qualifications & diplomas
+├── netlify.toml                 # Netlify deployment configuration
 ├── vercel.json                  # Vercel deployment & security headers config
 ├── package.json
 ├── tsconfig.json
@@ -123,7 +126,11 @@ portfolio-website-task/
 
 ---
 
-## 🚀 Deployment to Vercel
+## 🚀 Deployment
+
+The site is deployed on two platforms:
+
+### Vercel
 
 Deploy via the Vercel CLI using `pnpm`:
 
@@ -133,6 +140,18 @@ pnpm dlx vercel
 
 # Production deployment
 pnpm dlx vercel --prod
+```
+
+### Netlify
+
+Deploy the static export via the Netlify CLI:
+
+```bash
+# Build the static export
+NETLIFY=true pnpm build
+
+# Production deployment
+pnpm dlx netlify deploy --dir out --prod
 ```
 
 ---

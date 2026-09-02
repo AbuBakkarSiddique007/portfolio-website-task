@@ -1,0 +1,6 @@
+[build]
+  command = "NETLIFY=true pnpm build"
+  publish = "out"
+
+[build.environment]
+  NETLIFY = "true"

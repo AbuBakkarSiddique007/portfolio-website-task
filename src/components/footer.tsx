@@ -3,12 +3,6 @@
 import Link from "next/link";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <footer className="relative flex w-full justify-center overflow-x-clip pb-12 pt-0">
@@ -65,7 +59,9 @@ export default function Footer() {
 
             <button
               type="button"
-              onClick={scrollToTop}
+              onClick={() =>
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              }
               aria-label="Scroll to top"
               className="group flex h-8 items-center gap-1.5 rounded-xl border border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,0.85)] px-3 text-xs font-medium text-zinc-300 shadow-sm transition-all hover:border-[#38bdf8]/60 hover:bg-[#131822] hover:text-white hover:shadow-[0_0_12px_rgba(56,189,248,0.2)] active:scale-95 sm:h-8.5 sm:px-3.5"
             >
