@@ -5,7 +5,7 @@ import { Briefcase, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative flex w-full justify-center overflow-hidden py-8 lg:py-16">
+    <section id="hero" className="relative flex w-full justify-center overflow-hidden py-8 lg:py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(14,50,90,0.25),rgba(0,0,0,0))]"></div>
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden [mask-image:radial-gradient(ellipse_85%_70%_at_50%_40%,#000_50%,transparent_100%)]">
@@ -51,9 +51,9 @@ export default function Hero() {
                 <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-[72px] lg:leading-[84px]">
                   Mazidul
                 </h1>
-                <h1 className="text-4xl font-bold tracking-tight text-[#2db7ff] sm:text-6xl lg:text-[72px] lg:leading-[84px]">
+                <p className="text-4xl font-bold tracking-tight text-[#2db7ff] sm:text-6xl lg:text-[72px] lg:leading-[84px]">
                   Hakim
-                </h1>
+                </p>
               </div>
 
               <p className="w-full font-[family-name:var(--font-manrope)] text-[15px] font-normal leading-[180%] tracking-normal text-[#ababab] sm:text-[16px]">

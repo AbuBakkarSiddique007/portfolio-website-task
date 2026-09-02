@@ -49,7 +49,7 @@ export default function Expertise() {
               <div
                 className="group relative flex h-full w-full flex-col gap-[16px] rounded-[12px] border border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,1)] px-[24px] py-[22px] transition-all duration-300 hover:border-[#38bdf8]/60 hover:shadow-[0_0_24px_rgba(56,189,248,0.08)]"
               >
-                <div className="pointer-events-none absolute top-4 right-4 flex items-center justify-center opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100 scale-75">
+                <div className="pointer-events-none absolute top-4 right-4 flex scale-75 items-center justify-center opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100">
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#38bdf8] opacity-75"></span>
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-[#38bdf8] shadow-[0_0_8px_#38bdf8]"></span>

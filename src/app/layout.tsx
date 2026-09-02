@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable} ${ibmPlexMono.variable} h-full antialiased`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${manrope.variable} ${ibmPlexMono.variable} h-full antialiased`}>
       <body className="min-h-full w-full flex flex-col items-center font-sans">
         <div className="mx-auto w-full max-w-[1440px] flex-1 flex flex-col">
           <Navbar />

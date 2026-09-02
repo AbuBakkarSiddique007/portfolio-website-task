@@ -107,7 +107,7 @@ export default function CaseFiles() {
 
         <div className="grid w-full grid-cols-1 gap-[24px] lg:grid-cols-2">
           {cases.map((item, i) => (
-            <ScrollReveal key={item.id} delay={i * 100}>
+            <ScrollReveal key={item.id} delay={i * 100} className="h-full">
               <div
                 className="group relative flex h-full w-full flex-col gap-[16px] overflow-hidden rounded-[24px] border border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,1)] px-[20px] py-[24px] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#38bdf8]/50 hover:shadow-[0_16px_40px_-12px_rgba(56,189,248,0.18)] sm:px-[28px]"
               >
