@@ -7,6 +7,7 @@ import Experience from "@/components/experience";
 import Certificates from "@/components/certificates";
 import Qualifications from "@/components/qualifications";
 import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Certificates />
       <Qualifications />
       <Contact />
+      <Footer />
     </main>
   );
 }
