@@ -3,8 +3,8 @@
 export default function About() {
   return (
     <section id="about" className="relative flex w-full justify-center py-16 lg:py-24">
-      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[48px] px-6 xl:px-0">
-        <p className="h-[25px] w-full max-w-[1280px] font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[16px] px-6 xl:px-0">
+        <p className="w-full max-w-[1280px] font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
           ABOUT
         </p>
 
@@ -44,41 +44,41 @@ export default function About() {
 
             <div className="relative grid h-full w-full grid-cols-1 gap-[24px] sm:grid-cols-2">
               <div className="flex h-[222px] flex-col items-center justify-center gap-3 rounded-[20px] border border-zinc-800/80 bg-[#0e131b]/90 p-6 backdrop-blur-md transition-all hover:border-zinc-700">
-                <div className="flex items-baseline text-4xl font-bold tracking-tight text-white lg:text-[44px]">
+                <div className="flex h-[67px] items-center justify-center font-['Tusker_Grotesk',sans-serif] text-[56px] font-[500] leading-[120%] tracking-[0%] text-white">
                   <span>17</span>
                   <span className="text-[#38bdf8]">+</span>
                 </div>
-                <span className="font-mono text-[11px] font-medium tracking-wider text-zinc-400">
+                <span className="w-full max-w-[232px] text-center font-[family-name:var(--font-manrope)] text-[18px] font-semibold leading-[180%] tracking-normal text-[rgba(241,241,241,1)]">
                   YEARS IN IT LEADERSHIP
                 </span>
               </div>
 
               <div className="flex h-[222px] flex-col items-center justify-center gap-3 rounded-[20px] border border-zinc-800/80 bg-[#0e131b]/90 p-6 backdrop-blur-md transition-all hover:border-zinc-700">
-                <div className="flex items-baseline text-4xl font-bold tracking-tight text-white lg:text-[44px]">
+                <div className="flex h-[67px] items-center justify-center font-['Tusker_Grotesk',sans-serif] text-[56px] font-[500] leading-[120%] tracking-[0%] text-white">
                   <span className="text-[#38bdf8]">$</span>
                   <span>2.4 M</span>
                   <span className="text-[#38bdf8]">+</span>
                 </div>
-                <span className="font-mono text-[11px] font-medium tracking-wider text-zinc-400">
+                <span className="w-full max-w-[232px] text-center font-[family-name:var(--font-manrope)] text-[18px] font-semibold leading-[180%] tracking-normal text-[rgba(241,241,241,1)]">
                   ANNUAL IT BUDGET OWNED
                 </span>
               </div>
 
               <div className="flex h-[222px] flex-col items-center justify-center gap-3 rounded-[20px] border border-zinc-800/80 bg-[#0e131b]/90 p-6 backdrop-blur-md transition-all hover:border-zinc-700">
-                <div className="text-4xl font-bold tracking-tight text-white lg:text-[44px]">
-                  8
+                <div className="flex h-[67px] items-center justify-center font-['Tusker_Grotesk',sans-serif] text-[56px] font-[500] leading-[120%] tracking-[0%] text-white">
+                  <span>8</span>
                 </div>
-                <span className="font-mono text-[11px] font-medium tracking-wider text-zinc-400">
+                <span className="w-full max-w-[232px] text-center font-[family-name:var(--font-manrope)] text-[18px] font-semibold leading-[180%] tracking-normal text-[rgba(241,241,241,1)]">
                   BRANCHES SUPPORTED
                 </span>
               </div>
 
               <div className="flex h-[222px] flex-col items-center justify-center gap-3 rounded-[20px] border border-zinc-800/80 bg-[#0e131b]/90 p-6 backdrop-blur-md transition-all hover:border-zinc-700">
-                <div className="flex items-baseline text-4xl font-bold tracking-tight text-white lg:text-[44px]">
+                <div className="flex h-[67px] items-center justify-center font-['Tusker_Grotesk',sans-serif] text-[56px] font-[500] leading-[120%] tracking-[0%] text-white">
                   <span>99.9</span>
                   <span className="ml-1 text-[#38bdf8]">%</span>
                 </div>
-                <span className="font-mono text-[11px] font-medium tracking-wider text-zinc-400">
+                <span className="w-full max-w-[232px] text-center font-[family-name:var(--font-manrope)] text-[18px] font-semibold leading-[180%] tracking-normal text-[rgba(241,241,241,1)]">
                   NETWORK UPTIME
                 </span>
               </div>
