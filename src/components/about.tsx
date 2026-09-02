@@ -3,19 +3,19 @@
 export default function About() {
   return (
     <section id="about" className="relative flex w-full justify-center py-16 lg:py-24">
-      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[48px] px-6 lg:px-0">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[48px] px-6 xl:px-0">
         <p className="h-[25px] w-full max-w-[1280px] font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
           ABOUT
         </p>
 
         <div className="flex w-full flex-col justify-between gap-[32px] lg:flex-row lg:items-end">
 
-          <div className="flex w-full flex-col justify-between gap-6 lg:h-[530px] lg:w-[529px]">
-            <h2 className="flex items-center text-4xl font-bold tracking-normal text-[#f1f1f1] font-[family-name:var(--font-manrope)] sm:text-5xl lg:h-[72px] lg:w-[503px] lg:text-[72px] lg:leading-[100%]">
+          <div className="flex w-full flex-col justify-between gap-6 lg:w-[529px]">
+            <h2 className="flex items-center text-4xl font-bold tracking-normal text-[#f1f1f1] font-[family-name:var(--font-manrope)] sm:text-5xl lg:text-[72px] lg:leading-[100%]">
               Mazidul Hakim
             </h2>
 
-            <div className="flex flex-col justify-between gap-5 font-sans text-[16px] font-normal leading-[180%] tracking-normal text-[#ababab] text-justify lg:h-[458px] lg:w-[524px]">
+            <div className="flex flex-col justify-between gap-5 font-sans text-[15px] font-normal leading-[180%] tracking-normal text-[#ababab] text-justify sm:text-[16px]">
               <p>
                 <strong className="font-semibold text-white">
                   Senior IT leader with 17+ years&apos; experience

@@ -32,13 +32,13 @@ const qualifications = [
 export default function Qualifications() {
   return (
     <section id="qualifications" className="relative flex w-full justify-center py-16">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[16px] px-6 lg:px-0">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[16px] px-6 xl:px-0">
 
         <p className="font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
           PROFESSIONAL QUALIFICATIONS
         </p>
 
-        <div className="flex w-full flex-wrap items-center justify-between gap-[16px] lg:flex-nowrap">
+        <div className="grid w-full grid-cols-1 gap-[16px] sm:grid-cols-2 lg:grid-cols-4 justify-items-center">
           {qualifications.map((item) => (
             <div
               key={item.src}

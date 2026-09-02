@@ -26,7 +26,7 @@ function StarIcon() {
 
 export default function Marquee() {
   return (
-    <div className="group relative flex h-[56px] w-full max-w-[1456px] items-center justify-center overflow-hidden bg-[rgba(255,237,226,0.1)] py-[16px]">
+    <div className="group relative flex h-[56px] w-full max-w-[1440px] items-center justify-center overflow-hidden bg-[rgba(255,237,226,0.1)] py-[16px]">
       <div className="relative flex h-[24px] w-full max-w-[1440px] items-center overflow-hidden">
         <div className="animate-marquee flex items-center gap-[32px] whitespace-nowrap group-hover:[animation-play-state:paused]">
           {[...items, ...items, ...items, ...items].map((text, index) => (

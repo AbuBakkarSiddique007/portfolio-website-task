@@ -19,63 +19,63 @@ export default function Hero() {
         }}
       ></div>
 
-      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-center justify-between gap-12 px-6 lg:min-h-[534px] lg:flex-row lg:gap-0 lg:px-0">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-center justify-between gap-12 px-6 lg:min-h-[534px] lg:flex-row lg:gap-0 xl:px-0">
 
-        <div className="flex w-full flex-col justify-start gap-[28px] lg:h-[534px] lg:w-[575px]">
-          <div className="flex w-full flex-col justify-between lg:h-[375px] lg:w-[575px]">
-            <div className="flex h-[14px] w-full items-center gap-[8px] lg:w-[575px]">
-              <span className="relative flex h-2 w-2 items-center justify-center">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ccff00] opacity-75"></span>
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#ccff00] shadow-[0_0_8px_#ccff00]"></span>
-              </span>
-              <span className="font-mono text-xs leading-[14px] tracking-wider text-zinc-300">
-                IT Manager &bull; Cloud &bull; Cybersecurity
-              </span>
+          <div className="flex w-full flex-col justify-start gap-[28px] lg:w-[575px]">
+            <div className="flex w-full flex-col justify-between gap-4">
+              <div className="flex w-full items-center gap-[8px]">
+                <span className="relative flex h-2 w-2 items-center justify-center">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ccff00] opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#ccff00] shadow-[0_0_8px_#ccff00]"></span>
+                </span>
+                <span className="font-mono text-xs leading-[14px] tracking-wider text-zinc-300">
+                  IT Manager &bull; Cloud &bull; Cybersecurity
+                </span>
+              </div>
+
+              <div className="flex w-full flex-col">
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-[72px] lg:leading-[84px]">
+                  Mazidul
+                </h1>
+                <h1 className="text-4xl font-bold tracking-tight text-[#2db7ff] sm:text-6xl lg:text-[72px] lg:leading-[84px]">
+                  Hakim
+                </h1>
+              </div>
+
+              <p className="w-full font-[family-name:var(--font-manrope)] text-[15px] font-normal leading-[180%] tracking-normal text-[#ababab] sm:text-[16px]">
+                Senior IT leader with 17+ years turning technology functions around &mdash; network modernisation, cloud migration and cybersecurity uplift across complex, multi-site organisations.
+              </p>
+
+              <div className="flex w-full flex-wrap items-center gap-[12px] sm:gap-[16px]">
+                <div className="inline-flex h-[42px] items-center justify-center gap-[10px] rounded-[50px] border border-zinc-800 bg-[#131822]/80 px-[20px] py-[10px] text-xs font-medium text-zinc-300">
+                  IT Leadership
+                </div>
+                <div className="inline-flex h-[39px] max-w-full items-center justify-center gap-[10px] rounded-[50px] border-[0.5px] border-[#ccff00]/40 bg-[#1c2612]/70 px-[20px] py-[10px] font-mono text-xs font-medium text-[#ccff00]">
+                  <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[#ccff00] shadow-[0_0_6px_#ccff00]"></span>
+                  <span className="truncate">open to SOC / Cybersecurity</span>
+                </div>
+              </div>
             </div>
 
-            <div className="flex h-[168px] w-full flex-col justify-between lg:w-[575px]">
-              <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-[72px] lg:leading-[84px]">
-                Mazidul
-              </h1>
-              <h1 className="text-5xl font-bold tracking-tight text-[#2db7ff] sm:text-6xl lg:text-[72px] lg:leading-[84px]">
-                Hakim
-              </h1>
-            </div>
-
-            <p className="w-full text-[16px] font-normal leading-[180%] tracking-normal text-[#ababab] font-[family-name:var(--font-manrope)] lg:h-[87px] lg:w-[575px]">
-              Senior IT leader with 17+ years turning technology functions around &mdash; network modernisation, cloud migration and cybersecurity uplift across complex, multi-site organisations.
-            </p>
-
-            <div className="flex h-[42px] w-full flex-wrap items-center gap-[16px] sm:w-[473px]">
-              <div className="inline-flex h-[42px] w-[134px] items-center justify-center gap-[10px] rounded-[50px] border border-zinc-800 bg-[#131822]/80 px-[20px] py-[10px] text-xs font-medium text-zinc-300">
-                IT Leadership
-              </div>
-              <div className="inline-flex h-[39px] w-[323px] items-center justify-center gap-[10px] rounded-[50px] border-[0.5px] border-[#ccff00]/40 bg-[#1c2612]/70 px-[20px] py-[10px] font-mono text-xs font-medium text-[#ccff00]">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#ccff00] shadow-[0_0_6px_#ccff00]"></span>
-                open to SOC / Cybersecurity
-              </div>
+            <div className="flex w-full flex-col items-center gap-[14px] sm:flex-row sm:gap-[19px]">
+              <Link
+                href="#experience"
+                className="inline-flex h-[52px] w-full items-center justify-center gap-[8px] rounded-[12px] bg-[rgba(24,31,41,1)] px-[24px] text-sm font-medium text-white transition-all hover:bg-[rgba(30,39,52,1)] active:scale-95 sm:h-[56px] sm:w-[194px]"
+              >
+                <Briefcase className="h-4 w-4 text-white" />
+                <span className="text-white">Career Info</span>
+              </Link>
+              <Link
+                href="#contact"
+                className="inline-flex h-[52px] w-full items-center justify-center gap-[8px] rounded-[12px] bg-[rgba(56,189,248,1)] px-[24px] text-sm font-semibold text-black shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] transition-all hover:bg-[rgba(70,198,255,1)] active:scale-95 sm:h-[56px] sm:w-[213px]"
+              >
+                <Mail className="h-4 w-4 text-black" />
+                <span className="text-black">Contact Now</span>
+              </Link>
             </div>
           </div>
 
-          <div className="flex h-[56px] w-full items-center gap-[19px] sm:w-[426px]">
-            <Link
-              href="#experience"
-              className="inline-flex h-[56px] w-[194px] items-center justify-center gap-[8px] rounded-[12px] bg-[rgba(24,31,41,1)] pb-[20px] pl-[24px] pr-[32px] pt-[20px] text-sm font-medium text-white transition-all hover:bg-[rgba(30,39,52,1)] active:scale-95"
-            >
-              <Briefcase className="h-4 w-4 text-white" />
-              <span className="text-white">Career Info</span>
-            </Link>
-            <Link
-              href="#contact"
-              className="inline-flex h-[56px] w-[213px] items-center justify-center gap-[8px] rounded-[12px] bg-[rgba(56,189,248,1)] pb-[20px] pl-[24px] pr-[32px] pt-[20px] text-sm font-semibold text-black shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] transition-all hover:bg-[rgba(70,198,255,1)] active:scale-95"
-            >
-              <Mail className="h-4 w-4 text-black" />
-              <span className="text-black">Contact Now</span>
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative flex h-[534px] w-full items-center justify-center lg:w-[592px]">
+          <div className="relative flex h-[320px] w-full items-center justify-center sm:h-[420px] lg:h-[534px] lg:w-[592px]">
           <svg
             className="h-full w-full"
             viewBox="0 0 592 534"

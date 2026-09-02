@@ -18,11 +18,14 @@ export default function Contact() {
         background: "#131820",
         color: "#f1f1f1",
         confirmButtonColor: "#38bdf8",
+        scrollbarPadding: false,
         customClass: {
-          popup: "border border-[rgba(42,51,64,1)] rounded-[20px] shadow-2xl",
-          title: "font-[family-name:var(--font-manrope)] font-bold text-white",
-          htmlContainer: "text-zinc-400 font-sans",
-          confirmButton: "rounded-[12px] font-bold px-6 py-2.5",
+          popup: "!w-[90vw] !max-w-[420px] !p-5 sm:!p-7 border border-[rgba(42,51,64,1)] !rounded-[20px] shadow-2xl !bg-[#131820]",
+          title: "!text-lg sm:!text-2xl font-[family-name:var(--font-manrope)] font-bold text-white !pt-2",
+          htmlContainer: "!text-xs sm:!text-sm text-zinc-400 font-sans !m-0 !mt-2",
+          confirmButton: "!w-full sm:!w-auto !rounded-[12px] font-bold !px-6 !py-2.5 !text-sm !mt-2",
+          icon: "!scale-75 sm:!scale-100 !my-1",
+          actions: "!w-full !m-0 !mt-3 flex justify-center",
         },
       });
       return;
@@ -36,11 +39,14 @@ export default function Contact() {
       color: "#f1f1f1",
       confirmButtonColor: "#38bdf8",
       iconColor: "#4ade80",
+      scrollbarPadding: false,
       customClass: {
-        popup: "border border-[rgba(42,51,64,1)] rounded-[20px] shadow-2xl",
-        title: "font-[family-name:var(--font-manrope)] font-bold text-white",
-        htmlContainer: "text-zinc-400 font-sans",
-        confirmButton: "rounded-[12px] font-bold px-6 py-2.5",
+        popup: "!w-[90vw] !max-w-[420px] !p-5 sm:!p-7 border border-[rgba(42,51,64,1)] !rounded-[20px] shadow-2xl !bg-[#131820]",
+        title: "!text-lg sm:!text-2xl font-[family-name:var(--font-manrope)] font-bold text-white !pt-2",
+        htmlContainer: "!text-xs sm:!text-sm text-zinc-400 font-sans !m-0 !mt-2",
+        confirmButton: "!w-full sm:!w-auto !rounded-[12px] font-bold !px-6 !py-2.5 !text-sm !mt-2",
+        icon: "!scale-75 sm:!scale-100 !my-1",
+        actions: "!w-full !m-0 !mt-3 flex justify-center",
       },
     });
 
@@ -49,10 +55,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative flex w-full justify-center pb-12 pt-16 lg:pb-16 lg:pt-24">
+    <section id="contact" className="relative flex w-full justify-center overflow-x-clip pb-12 pt-16 lg:pb-16 lg:pt-24">
       <div className="pointer-events-none absolute -right-28 -bottom-36 h-[850px] w-[800px] rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.16)_0%,rgba(14,50,90,0.1)_45%,transparent_75%)] blur-[120px]"></div>
 
-      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[32px] px-6 lg:px-0">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[32px] px-6 xl:px-0">
 
         <p className="font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
           CONTACT
@@ -61,7 +67,7 @@ export default function Contact() {
         <div className="flex w-full flex-col justify-between gap-[48px] lg:flex-row lg:gap-[141px]">
 
           <div className="flex w-full flex-col gap-[32px] lg:w-[631px]">
-            <h2 className="font-[family-name:var(--font-manrope)] text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-[48px] lg:leading-[1.15]">
+            <h2 className="font-[family-name:var(--font-manrope)] text-3xl font-bold tracking-tight text-white sm:text-5xl lg:text-[48px] lg:leading-[1.15]">
               LET&apos;S SECURE WHAT<br />YOU BUILD
             </h2>
 
@@ -125,7 +131,7 @@ export default function Contact() {
               <div>
                 <button
                   type="submit"
-                  className="flex h-[48px] items-center justify-center gap-2 rounded-[12px] bg-[#38bdf8] px-6 text-[14px] font-bold text-white shadow-[0px_4px_12px_rgba(56,189,248,0.3)] transition-all hover:bg-[#2db7ff] hover:shadow-[0px_6px_16px_rgba(56,189,248,0.4)] active:scale-[0.98]"
+                  className="flex h-[48px] w-full items-center justify-center gap-2 rounded-[12px] bg-[#38bdf8] px-6 text-[14px] font-bold text-white shadow-[0px_4px_12px_rgba(56,189,248,0.3)] transition-all hover:bg-[#2db7ff] hover:shadow-[0px_6px_16px_rgba(56,189,248,0.4)] active:scale-[0.98] sm:w-auto"
                 >
                   <svg
                     className="h-4 w-4"

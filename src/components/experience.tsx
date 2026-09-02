@@ -101,38 +101,38 @@ export default function Experience() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="experience" className="relative flex w-full justify-center py-16">
+    <section id="experience" className="relative flex w-full justify-center overflow-x-clip py-16">
       <div className="pointer-events-none absolute -right-24 top-1/3 h-[750px] w-[650px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(20,184,166,0.18)_0%,rgba(14,50,90,0.12)_45%,transparent_75%)] blur-[100px]"></div>
       <div className="pointer-events-none absolute -left-20 bottom-10 h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(30,58,138,0.14)_0%,transparent_70%)] blur-[90px]"></div>
 
-      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[40px] px-6 lg:px-0">
+      <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[40px] px-6 xl:px-0">
 
         <div className="flex flex-col gap-[4px]">
           <p className="font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] text-[rgba(145,145,145,1)]">
             EXPERIENCE
           </p>
-          <h2 className="font-[family-name:var(--font-manrope)] text-[48px] font-semibold leading-[100%] tracking-normal text-white">
+          <h2 className="font-[family-name:var(--font-manrope)] text-3xl font-semibold leading-[100%] tracking-normal text-white sm:text-4xl lg:text-[48px]">
             Career <span className="text-[#38bdf8]">Timeline</span>
           </h2>
         </div>
 
-        <div className="relative flex w-full max-w-[1011px] flex-col gap-0 self-end lg:self-auto">
-          <div className="absolute left-[210px] top-[0px] bottom-[29px] w-[2px] rounded-full bg-[rgba(42,51,64,1)]"></div>
+        <div className="relative flex w-full max-w-[1011px] flex-col gap-0 self-end">
+          <div className="absolute left-[90px] top-[0px] bottom-[29px] w-[2px] rounded-full bg-[rgba(42,51,64,1)] sm:left-[210px]"></div>
 
           {experiences.map((exp, i) => (
             <div key={exp.title} className="flex items-start pb-[24px]">
 
-              <div className="flex w-[210px] shrink-0 flex-col items-end gap-[8px] pr-[16px] pt-[20px]">
-                <span className="font-[family-name:var(--font-manrope)] text-[15px] font-semibold text-[rgba(190,190,190,1)]">
+              <div className="flex w-[90px] shrink-0 flex-col items-end gap-[6px] pr-[10px] pt-[20px] sm:w-[210px] sm:gap-[8px] sm:pr-[16px]">
+                <span className="text-right font-[family-name:var(--font-manrope)] text-[13px] font-semibold text-[rgba(190,190,190,1)] sm:text-[15px]">
                   {exp.period}
                 </span>
-                <span className={`rounded-full border px-[10px] py-[2px] font-[family-name:var(--font-ibm-plex-mono)] text-[10px] font-medium ${exp.badgeColor}`}>
+                <span className={`rounded-full border px-[8px] py-[1px] font-[family-name:var(--font-ibm-plex-mono)] text-[9px] font-medium sm:px-[10px] sm:py-[2px] sm:text-[10px] ${exp.badgeColor}`}>
                   {exp.duration}
                 </span>
               </div>
 
               <div className="relative flex shrink-0 flex-col justify-center pt-[24px]">
-                <div className="h-[2px] w-[32px]" style={{ backgroundColor: exp.accentColor + "88" }}></div>
+                <div className="h-[2px] w-[14px] sm:w-[32px]" style={{ backgroundColor: exp.accentColor + "88" }}></div>
               </div>
 
               <div className="flex-1 pt-[10px]">

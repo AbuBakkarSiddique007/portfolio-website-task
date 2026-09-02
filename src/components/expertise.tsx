@@ -36,7 +36,7 @@ const expertiseData = [
 export default function Expertise() {
   return (
     <section id="expertise" className="relative flex w-full justify-center py-16">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[16px] px-6 lg:px-0">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[16px] px-6 xl:px-0">
         <p className="h-[25px] w-full max-w-[1280px] font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
           EXPERTISE
         </p>

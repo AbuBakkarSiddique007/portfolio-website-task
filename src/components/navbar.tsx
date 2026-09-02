@@ -83,7 +83,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 flex h-[66px] w-full max-w-[1440px] items-center justify-center bg-[rgba(19,24,32,0.6)] backdrop-blur-[16px]">
-      <div className="flex h-[34px] w-full max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-0">
+      <div className="flex h-[34px] w-full max-w-[1280px] items-center justify-between px-4 sm:px-6 xl:px-0">
         <Link
           href="/"
           onClick={(e) => {

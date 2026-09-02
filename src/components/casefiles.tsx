@@ -95,7 +95,7 @@ const cases = [
 export default function CaseFiles() {
   return (
     <section id="impact" className="relative flex w-full justify-center py-16">
-      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[24px] px-6 lg:px-0">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[24px] px-6 xl:px-0">
 
         <div className="flex h-[34px] w-full max-w-[1280px] items-center gap-[8px] pb-[8px]">
           <p className="font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
@@ -107,7 +107,7 @@ export default function CaseFiles() {
           {cases.map((item) => (
             <div
               key={item.id}
-              className="flex w-full flex-col gap-[16px] rounded-[24px] border border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,1)] px-[28px] py-[24px] transition-all hover:border-zinc-600 lg:w-[632px]"
+              className="flex w-full flex-col gap-[16px] rounded-[24px] border border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,1)] px-[20px] py-[24px] transition-all hover:border-zinc-600 sm:px-[28px]"
             >
               <div className="flex items-center justify-between">
                 <span className={`rounded-full border px-[12px] py-[4px] font-[family-name:var(--font-ibm-plex-mono)] text-[11px] font-medium ${item.categoryColor}`}>
