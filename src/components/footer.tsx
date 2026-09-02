@@ -7,18 +7,12 @@ export default function Footer() {
     <footer className="relative flex w-full justify-center pb-12 pt-8">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[16px] px-6 lg:px-0">
 
-        <div className="flex w-full items-center justify-end gap-[32px]">
+        <div className="flex w-full flex-wrap items-center justify-end gap-[20px] sm:gap-[32px]">
           <Link
             href="#about"
             className="text-[13px] font-normal text-zinc-400 transition-colors hover:text-white"
           >
             About
-          </Link>
-          <Link
-            href="#about"
-            className="text-[13px] font-normal text-zinc-400 transition-colors hover:text-white"
-          >
-            Impact
           </Link>
           <Link
             href="#expertise"
@@ -27,10 +21,28 @@ export default function Footer() {
             Expertise
           </Link>
           <Link
+            href="#impact"
+            className="text-[13px] font-normal text-zinc-400 transition-colors hover:text-white"
+          >
+            Case Files
+          </Link>
+          <Link
             href="#experience"
             className="text-[13px] font-normal text-zinc-400 transition-colors hover:text-white"
           >
             Experience
+          </Link>
+          <Link
+            href="#certificates"
+            className="text-[13px] font-normal text-zinc-400 transition-colors hover:text-white"
+          >
+            Certificates
+          </Link>
+          <Link
+            href="#qualifications"
+            className="text-[13px] font-normal text-zinc-400 transition-colors hover:text-white"
+          >
+            Qualifications
           </Link>
         </div>
 

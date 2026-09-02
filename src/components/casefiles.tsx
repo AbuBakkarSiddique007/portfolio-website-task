@@ -94,7 +94,7 @@ const cases = [
 
 export default function CaseFiles() {
   return (
-    <section id="experience" className="relative flex w-full justify-center py-16">
+    <section id="impact" className="relative flex w-full justify-center py-16">
       <div className="mx-auto flex w-full max-w-[1280px] flex-col gap-[24px] px-6 lg:px-0">
 
         <div className="flex h-[34px] w-full max-w-[1280px] items-center gap-[8px] pb-[8px]">
