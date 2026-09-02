@@ -4,6 +4,9 @@ export default function About() {
   return (
     <section id="about" className="relative flex w-full justify-center py-16 lg:py-24">
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col gap-[48px] px-6 lg:px-0">
+        <p className="h-[25px] w-full max-w-[1280px] font-[family-name:var(--font-ibm-plex-mono)] text-[14px] font-semibold leading-[180%] tracking-normal text-[rgba(145,145,145,1)]">
+          ABOUT
+        </p>
 
         <div className="flex w-full flex-col justify-between gap-[32px] lg:flex-row lg:items-end">
 

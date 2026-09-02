@@ -1,6 +1,7 @@
 import Hero from "@/components/hero";
 import Marquee from "@/components/marquee";
 import About from "@/components/about";
+import Expertise from "@/components/expertise";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <About />
+      <Expertise />
     </main>
   );
 }
