@@ -12,8 +12,14 @@ const navItems = [
   { name: "Qualifications", href: "#qualifications", id: "qualifications" },
 ];
 
+const allSections = [
+  ...navItems,
+  { name: "Contact", href: "#contact", id: "contact" },
+];
+
 export default function Navbar() {
   const [activeItem, setActiveItem] = useState("About");
+  const [isContactActive, setIsContactActive] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const isClickingRef = useRef(false);
 
@@ -21,10 +27,17 @@ export default function Navbar() {
     const handleScroll = () => {
       if (isClickingRef.current) return;
 
-      const triggerPosition = 180;
+      const isBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
+      if (isBottom) {
+        setIsContactActive(true);
+        setActiveItem("");
+        return;
+      }
+
+      const triggerPosition = 200;
       let currentSection = "";
 
-      for (const item of navItems) {
+      for (const item of allSections) {
         const element = document.getElementById(item.id);
         if (element) {
           const rect = element.getBoundingClientRect();
@@ -35,20 +48,27 @@ export default function Navbar() {
         }
       }
 
-      if (currentSection) {
+      if (currentSection === "Contact") {
+        setIsContactActive(true);
+        setActiveItem("");
+      } else if (currentSection) {
+        setIsContactActive(false);
         setActiveItem(currentSection);
       } else if (window.scrollY < 200) {
+        setIsContactActive(false);
         setActiveItem("About");
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, item: { name: string; id: string }) => {
     e.preventDefault();
     setActiveItem(item.name);
+    setIsContactActive(false);
     setIsMobileOpen(false);
 
     isClickingRef.current = true;
@@ -70,6 +90,14 @@ export default function Navbar() {
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     setIsMobileOpen(false);
+    setIsContactActive(true);
+    setActiveItem("");
+
+    isClickingRef.current = true;
+    setTimeout(() => {
+      isClickingRef.current = false;
+    }, 1000);
+
     const element = document.getElementById("contact");
     if (element) {
       const navOffset = 80;
@@ -111,10 +139,11 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item)}
-                  className={`relative flex flex-col items-center text-sm transition-colors ${isActive
+                  className={`relative flex flex-col items-center text-sm transition-colors ${
+                    isActive
                       ? "font-medium text-white"
                       : "text-zinc-400 hover:text-zinc-200"
-                    }`}
+                  }`}
                 >
                   <span>{item.name}</span>
                   {isActive && (
@@ -128,9 +157,19 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={handleContactClick}
-            className="inline-flex h-[34px] items-center justify-center rounded-xl bg-[#2db7ff] px-5 text-xs font-semibold text-white shadow-[0_0_16px_rgba(45,183,255,0.25)] transition-all hover:bg-[#3ec0ff] hover:shadow-[0_0_20px_rgba(45,183,255,0.4)] active:scale-95"
+            className={`relative inline-flex h-[34px] items-center justify-center gap-2 rounded-xl px-5 text-xs font-semibold text-white transition-all duration-300 active:scale-95 ${
+              isContactActive
+                ? "bg-gradient-to-r from-[#0284c7] via-[#0ea5e9] to-[#38bdf8] shadow-[0_0_20px_rgba(56,189,248,0.55)] ring-2 ring-[#38bdf8] ring-offset-2 ring-offset-[#0d121a]"
+                : "bg-[#2db7ff] shadow-[0_0_16px_rgba(45,183,255,0.25)] hover:bg-[#3ec0ff] hover:shadow-[0_0_20px_rgba(45,183,255,0.4)]"
+            }`}
           >
-            Let&apos;s Talk
+            {isContactActive && (
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-white"></span>
+              </span>
+            )}
+            <span>Let&apos;s Talk</span>
           </a>
         </div>
 
@@ -182,10 +221,11 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item)}
-                  className={`flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors ${isActive
+                  className={`flex items-center justify-between rounded-md px-3 py-2 text-sm transition-colors ${
+                    isActive
                       ? "bg-zinc-800/60 font-medium text-white"
                       : "text-zinc-400 hover:bg-zinc-800/40 hover:text-white"
-                    }`}
+                  }`}
                 >
                   <span>{item.name}</span>
                   {isActive && (
@@ -198,9 +238,19 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={handleContactClick}
-                className="flex h-9 w-full items-center justify-center rounded-xl bg-[#2db7ff] text-xs font-semibold text-white transition-colors hover:bg-[#3ec0ff]"
+                className={`flex h-9 w-full items-center justify-center gap-2 rounded-xl text-xs font-semibold text-white transition-all ${
+                  isContactActive
+                    ? "bg-gradient-to-r from-[#0284c7] to-[#38bdf8] shadow-[0_0_20px_rgba(56,189,248,0.5)] ring-2 ring-[#38bdf8]"
+                    : "bg-[#2db7ff] hover:bg-[#3ec0ff]"
+                }`}
               >
-                Let&apos;s Talk
+                {isContactActive && (
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white opacity-75"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-white"></span>
+                  </span>
+                )}
+                <span>Let&apos;s Talk</span>
               </a>
             </div>
           </div>
