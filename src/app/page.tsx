@@ -4,6 +4,7 @@ import About from "@/components/about";
 import Expertise from "@/components/expertise";
 import CaseFiles from "@/components/casefiles";
 import Experience from "@/components/experience";
+import Certificates from "@/components/certificates";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Expertise />
       <CaseFiles />
       <Experience />
+      <Certificates />
     </main>
   );
 }
