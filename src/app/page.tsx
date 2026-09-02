@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex min-h-dvh w-full items-center justify-center bg-black text-zinc-50">
+    <div className="flex min-h-[calc(100dvh-4rem)] w-full items-center justify-center bg-black text-zinc-50">
       <div className="flex flex-col items-center gap-6">
         <h1 className="text-2xl font-semibold tracking-tighter md:text-4xl">
           Portfolio Under Construction
