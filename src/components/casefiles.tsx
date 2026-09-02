@@ -107,16 +107,31 @@ export default function CaseFiles() {
           {cases.map((item) => (
             <div
               key={item.id}
-              className="flex w-full flex-col gap-[16px] rounded-[24px] border border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,1)] px-[20px] py-[24px] transition-all hover:border-zinc-600 sm:px-[28px]"
+              className="group relative flex w-full flex-col gap-[16px] overflow-hidden rounded-[24px] border border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,1)] px-[20px] py-[24px] transition-all duration-300 hover:-translate-y-1.5 hover:border-[#38bdf8]/50 hover:shadow-[0_16px_40px_-12px_rgba(56,189,248,0.18)] sm:px-[28px]"
             >
+              <div className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#38bdf8] to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+              <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[radial-gradient(circle,rgba(56,189,248,0.15)_0%,transparent_70%)] opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"></div>
+
               <div className="flex items-center justify-between">
                 <span className={`rounded-full border px-[12px] py-[4px] font-[family-name:var(--font-ibm-plex-mono)] text-[11px] font-medium ${item.categoryColor}`}>
                   {item.category}
                 </span>
+
+                <div className="flex h-7 w-7 items-center justify-center rounded-full border border-[rgba(42,51,64,0.8)] bg-[rgba(14,19,27,0.7)] text-zinc-400 transition-all duration-300 group-hover:border-[#38bdf8]/60 group-hover:bg-[#38bdf8]/10 group-hover:text-[#38bdf8]">
+                  <svg
+                    className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>
+                </div>
               </div>
 
               <div className="flex flex-col gap-[8px]">
-                <h3 className="font-[family-name:var(--font-manrope)] text-[22px] font-bold leading-tight tracking-normal text-[rgba(241,241,241,1)]">
+                <h3 className="font-[family-name:var(--font-manrope)] text-[22px] font-bold leading-tight tracking-normal text-[rgba(241,241,241,1)] transition-colors duration-300 group-hover:text-white">
                   {item.title}
                 </h3>
                 <p className="font-sans text-[13px] font-normal leading-[170%] text-[rgba(160,160,160,1)]">
@@ -124,7 +139,7 @@ export default function CaseFiles() {
                 </p>
               </div>
 
-              <div className="mt-auto flex flex-col gap-[6px] rounded-[8px] border border-[rgba(42,51,64,0.6)] bg-[rgba(14,19,27,0.7)] px-[14px] py-[12px]">
+              <div className="mt-auto flex flex-col gap-[6px] rounded-[8px] border border-[rgba(42,51,64,0.6)] bg-[rgba(14,19,27,0.7)] px-[14px] py-[12px] transition-colors duration-300 group-hover:border-[rgba(56,189,248,0.25)]">
                 {item.outcomes.map((o) => (
                   <div key={o.action} className="flex items-baseline justify-between gap-4">
                     <span className="font-[family-name:var(--font-ibm-plex-mono)] text-[11px] leading-[200%] text-[#4ade80]">

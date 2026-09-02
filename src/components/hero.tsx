@@ -8,16 +8,30 @@ export default function Hero() {
     <section className="relative flex w-full justify-center overflow-hidden py-8 lg:py-16">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(14,50,90,0.25),rgba(0,0,0,0))]"></div>
 
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.18]"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
-          `,
-          backgroundSize: "48px 48px",
-        }}
-      ></div>
+      <div className="pointer-events-none absolute inset-0 overflow-hidden [mask-image:radial-gradient(ellipse_85%_70%_at_50%_40%,#000_50%,transparent_100%)]">
+        <div
+          className="absolute inset-0 opacity-[0.16]"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px)
+            `,
+            backgroundSize: "48px 48px",
+          }}
+        ></div>
+
+        <div className="absolute inset-0 mx-auto max-w-[1440px]">
+          <div className="absolute top-[48px] left-[96px] h-[48px] w-[48px] rounded-[4px] border border-[#38bdf8]/30 bg-[#38bdf8]/10 shadow-[0_0_16px_rgba(56,189,248,0.2)]"></div>
+          <div className="absolute top-[144px] left-[240px] h-[48px] w-[48px] rounded-[4px] border border-[#38bdf8]/20 bg-[#38bdf8]/5"></div>
+          <div className="absolute top-[96px] right-[144px] h-[48px] w-[48px] rounded-[4px] border border-[#38bdf8]/35 bg-[#38bdf8]/12 shadow-[0_0_20px_rgba(56,189,248,0.25)] animate-pulse"></div>
+          <div className="absolute top-[288px] right-[240px] h-[48px] w-[48px] rounded-[4px] border border-[#ccff00]/30 bg-[#ccff00]/10 shadow-[0_0_16px_rgba(204,255,0,0.18)]"></div>
+          <div className="absolute bottom-[96px] left-[192px] h-[48px] w-[48px] rounded-[4px] border border-[#38bdf8]/25 bg-[#38bdf8]/8 shadow-[0_0_12px_rgba(56,189,248,0.15)]"></div>
+          <div className="absolute bottom-[144px] right-[96px] h-[48px] w-[48px] rounded-[4px] border border-[#38bdf8]/20 bg-[#38bdf8]/5"></div>
+          <div className="absolute top-[240px] left-[48px] h-[48px] w-[48px] rounded-[4px] border border-[#38bdf8]/25 bg-[#38bdf8]/8 shadow-[0_0_12px_rgba(56,189,248,0.15)] animate-pulse"></div>
+          <div className="absolute bottom-[48px] left-[480px] h-[48px] w-[48px] rounded-[4px] border border-[#38bdf8]/20 bg-[#38bdf8]/5"></div>
+          <div className="absolute top-[48px] right-[432px] h-[48px] w-[48px] rounded-[4px] border border-[#38bdf8]/25 bg-[#38bdf8]/8 shadow-[0_0_12px_rgba(56,189,248,0.15)]"></div>
+        </div>
+      </div>
 
       <div className="relative mx-auto flex w-full max-w-[1280px] flex-col items-center justify-between gap-12 px-6 lg:min-h-[534px] lg:flex-row lg:gap-0 xl:px-0">
 

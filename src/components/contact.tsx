@@ -131,22 +131,22 @@ export default function Contact() {
               <div>
                 <button
                   type="submit"
-                  className="flex h-[48px] w-full items-center justify-center gap-2 rounded-[12px] bg-[#38bdf8] px-6 text-[14px] font-bold text-white shadow-[0px_4px_12px_rgba(56,189,248,0.3)] transition-all hover:bg-[#2db7ff] hover:shadow-[0px_6px_16px_rgba(56,189,248,0.4)] active:scale-[0.98] sm:w-auto"
+                  className="group relative flex h-[52px] w-full items-center justify-center gap-2.5 overflow-hidden rounded-[14px] bg-gradient-to-r from-[#2db7ff] via-[#38bdf8] to-[#67e8f9] px-8 font-[family-name:var(--font-manrope)] text-[15px] font-bold tracking-wide text-[#080c14] shadow-[0_4px_20px_rgba(56,189,248,0.35)] transition-all duration-300 hover:shadow-[0_6px_28px_rgba(56,189,248,0.55)] active:scale-[0.98] sm:w-auto"
                 >
+                  <div className="pointer-events-none absolute inset-0 -translate-x-full -skew-x-12 bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-out group-hover:translate-x-full"></div>
                   <svg
-                    className="h-4 w-4"
-                    fill="none"
+                    className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
                     viewBox="0 0 24 24"
+                    fill="none"
                     stroke="currentColor"
-                    strokeWidth={2}
+                    strokeWidth="2.4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                    />
+                    <path d="M22 2L11 13" />
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" />
                   </svg>
-                  <span>SEND MESSAGE</span>
+                  <span className="relative z-10 font-bold">SEND MESSAGE</span>
                 </button>
               </div>
             </form>

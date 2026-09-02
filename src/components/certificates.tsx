@@ -40,7 +40,7 @@ export default function Certificates() {
               key={cert.src}
               className="group relative flex h-[204px] w-full max-w-[204px] shrink-0 flex-col items-center justify-center gap-[16px] overflow-hidden rounded-[43.2px] border-[0.8px] border-[rgba(42,51,64,1)] bg-[rgba(19,24,32,1)] px-[24px] py-[22px] transition-all hover:border-[rgba(56,189,248,0.4)] hover:shadow-[0_0_24px_rgba(56,189,248,0.08)]"
             >
-              <div className="absolute top-[10px] right-[12px] h-[6px] w-[6px] rounded-full bg-[#38bdf8] opacity-70"></div>
+              <div className="absolute top-[18px] right-[20px] h-[6px] w-[6px] rounded-full bg-[#38bdf8] opacity-70"></div>
 
               <div className="relative flex h-[80px] w-[80px] items-center justify-center overflow-hidden rounded-[16px] bg-white">
                 <Image
