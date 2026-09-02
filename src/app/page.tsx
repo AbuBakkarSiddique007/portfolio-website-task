@@ -6,6 +6,7 @@ import CaseFiles from "@/components/casefiles";
 import Experience from "@/components/experience";
 import Certificates from "@/components/certificates";
 import Qualifications from "@/components/qualifications";
+import Contact from "@/components/contact";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Experience />
       <Certificates />
       <Qualifications />
+      <Contact />
     </main>
   );
 }
